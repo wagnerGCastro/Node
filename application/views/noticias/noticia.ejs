@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Notícias</title>
+		</head>
+	<body>
+		<h1>Notícias</h1>
+		<table border="1" cellpadding="5">
+			<tr>
+				<td> Sequsuario </td>
+				<td> Nome </td>
+				<td> Email </td>
+				<td> Seqpessoa </td>
+				<td> Ativo </td>
+				<td> Nível </td>
+			</tr>
+			<% for (var i=0; i < usuario.length; i++) { %>
+				<tr>
+					<td><a href="noticias/noticia"> <%= usuario[i].sequsuario %>  </a></td>
+					<td> <%= usuario[i].nome %></td>
+					<td> <%= usuario[i].email %></td>
+					<td> <%= usuario[i].seqpessoa %></td>
+					<td> <%= usuario[i].ativo %></td>
+					<td> <%= usuario[i].nivel %></td>
+				</tr>
+			<% } %>
+		</table>
+	</body>
+</html>

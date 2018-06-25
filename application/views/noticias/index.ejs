@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Usuários</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="framework/bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="framework/jquery-ui-1.12.1.custom/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="plugins/DataTables/media/css/jquery.dataTables.css">
+		<link rel="stylesheet" type="text/css" href="css/@font-face.css" />
+		<link rel="stylesheet" type="text/css" href="css/cursonode.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-9">
+				<h1>Usuários Cadastrados</h1>
+				<br>
+				<table id="usuario" class="table display myTable table-bordered table-responsive" border="" cellpadding="" width="100%">
+						<thead>
+							<tr>
+								<td> Sequsuario </td>
+								<td> Nome </td>
+								<td> Email </td>
+								<td> Seqpessoa </td>
+								<td> Ativo </td>
+								<td> Nível </td>
+							</tr>
+						<thead>
+						<tbody>
+							<% for (var i=0; i < usuario.length; i++) { %>
+								<tr>
+									<td><a href="noticias/noticia"> <%= usuario[i].sequsuario %>  </a></td>
+									<td> <%= usuario[i].nome %></td>
+									<td> <%= usuario[i].email %></td>
+									<td> <%= usuario[i].seqpessoa %></td>
+									<td> <%= usuario[i].ativo %></td>
+									<td> <%= usuario[i].nivel %></td>
+								</tr>
+							<% } %>
+						<tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- Javascript -->
+		<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+		<script type="text/javascript" src="framework/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="framework/bootstrap-3.3.7/js/bootstrap.min.js"></script> 
+		<!--DataTables-1.10.13 -->
+		<script type="text/javascript" language="javascript" src="plugins/DataTables/media/js/jquery.dataTables.min.js"></script>
+		<!--script page -->
+		<script type="text/javascript" src="js/cursonode.js"></script>
+
+	</body>
+</html>
