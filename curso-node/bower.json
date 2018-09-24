@@ -1,0 +1,28 @@
+{
+  "name": "curso-node",
+  "description": "Site de noticias",
+  "main": "index.ejs",
+  "authors": [
+    "\"Wagner Gomes htps://github/wagnerGCastro.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "nodejs"
+  ],
+  "homepage": "https://github.com/wagnerGCastro/Node",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "izitoast": "^1.4.0",
+    "bootstrap": "3.3.7",
+    "datatables.net": "^1.10.19",
+    "jquery-ui": "1.12.1",
+    "jquery": "^3.3.1"
+  }
+}

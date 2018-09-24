@@ -1,0 +1,27 @@
+<table id="tableLista" width="100%">
+<thead>
+    <tr>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+<% if (alunos.length > 0) { %>
+    <% alunos.forEach((aluno) => { %>
+    <tr>
+        <td><%=aluno.nome%></td>
+        <td><%=aluno.email%></td>
+        <td>
+            <a href="javascript: alterar('<%=aluno._id%>')">Alterar</a>
+            <a href="javascript: excluir('<%=aluno._id%>')">Excluir</a>
+        </td>
+    </tr>
+    <% })%>
+<% }else{ %>
+   <tr>
+       <td colspan="3">Não há alunos cadastrados.</td>
+   </tr>
+<% } %>
+</tbody>
+</table>

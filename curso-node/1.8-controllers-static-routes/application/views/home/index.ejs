@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Portal de notícias</title>
+		<meta content="width=device-width, initial-scale=1" name="viewport"> 
+		<!-- JQuery -->
+		<script src="js/jquery/jquery-2.2.1.js"></script>
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="frameworks/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- incluindo css -->
+		<link href="css/cursonode.css" rel="stylesheet">
+		<!-- favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico"/>
+
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" style="border:1px solid #000 !important" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span style="border:1px solid #000 !important" class="icon-bar"></span>
+						<span style="border:1px solid #000 !important" class="icon-bar"></span>
+						<span style="border:1px solid #000 !important" class="icon-bar"></span> 
+					</button>
+
+					<a class="navbar-brand" href="#"><img style="margin-top:-20px;" width="100" src="https://i1.wp.com/www.edersonmelo.com/wp-content/uploads/2013/08/nodejs-logo.png?w=600&ssl=1"></a>
+			    </div>
+
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="">Home</a></li>
+
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Noticias
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="/noticias">Ver noticias</a></li>
+								<li><a href="/noticia">Ver noticia</a></li>
+								<li><a href="/formulario_inclusao_noticia">Cadastrar noticias</a></li>
+							</ul>
+						</li>
+
+						<li><a href="#">Page 2</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+				      	<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				      	<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			    	</ul>
+				</div>
+			</div>
+		</nav>
+
+
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-md-8">
+	    			<% for(var i=0; i < noticias.length; i++) {  %>	
+	    				<div class="noticia_wrapper">
+			    			<span class="noticia_autor">Por <%= noticias[i].autor %></span>
+			    			<a href="/noticia?id=<%=noticias[i].id%>" class="noticia_titulo"><%= noticias[i].titulo %></a>
+			    			<span class="noticia_data"><%= noticias[i].datacriacao %></span>
+			    			<br />
+			    			<p class="noticia_resumo">
+			    				<%= noticias[i].resumo %>
+			    			</p>
+		    			</div>
+		    		<% } %>
+		    	</div>
+
+				<div class="col-md-4">
+	    			<div class="noticia_wrapper">
+						
+		    			<span class="noticia_autor">Por Jorge</span>
+		    			<a href="noticia.html" class="noticia_titulo">Título da notícia</a>
+		    			<span class="noticia_data">07/09/2016</span>
+		    			<br />
+		    			<p class="noticia_resumo">
+		    				Aqui fica o resumo da notícia com um limite de 100 caracteres!
+		    			</p>
+
+		    		</div>
+		    		<div class="noticia_wrapper">
+		    			<span class="noticia_autor">Por Jorge</span>
+		    			<a href="noticia.html" class="noticia_titulo">Título da notícia</a>
+		    			<span class="noticia_data">07/09/2016</span>
+		    			<br />
+		    			<p class="noticia_resumo">
+		    				Aqui fica o resumo da notícia com um limite de 100 caracteres!
+		    			</p>
+		    		</div>
+		    		<div class="noticia_wrapper">
+		    			<span class="noticia_autor">Por Jorge</span>
+		    			<a href="noticia.html" class="noticia_titulo">Título da notícia</a>
+		    			<span class="noticia_data">07/09/2016</span>
+		    			<br />
+		    			<p class="noticia_resumo">
+		    				Aqui fica o resumo da notícia com um limite de 100 caracteres!
+		    			</p>
+		    		</div>
+		    	</div>
+
+	    	</div>
+
+	    	
+	    </div>
+		
+		<div class="row ver_mais">
+	    	<button type="button" class="btn btn-default"><a href="/noticias">Ver todas as notícias</a></button>
+	    </div>
+		
+		<!-- scsripts -->
+		<script src="frameworks/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+		<title>Portal de notícias</title>
+		<meta content="width=device-width, initial-scale=1" name="viewport"> 
+		<!-- JQuery -->
+		<script src="js/jquery/jquery-2.2.1.js"></script>
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="frameworks/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- incluindo css -->
+		<link href="css/cursonode.css" rel="stylesheet">
+		<!-- favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico"/>
+    </head>
+    <body>
+        <div class="container">
+            <h2> Noticia </h2>
+			<div class="container">
+		    	<div class="row">
+		    		<div class="col-md-12">
+		    			<div class="noticia_wrapper">
+			    			<span class="noticia_autor"><%= noticia[0].autor %></span>
+			    			<a href="" class="noticia_titulo"><%= noticia[0].titulo %></a>
+			    			<span class="noticia_data"><%= noticia[0].datacriacao %></span>
+			    			<br />
+			    			<p class="noticia_resumo">
+			    				<%= noticia[0].noticia %>
+			    			</p>
+			    		</div>
+			    	</div>
+		    	</div>
+	    	</div>
+        </div>
+
+        <!-- scsripts -->
+        <!-- <script src="frameworks/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    </body>
+</html>

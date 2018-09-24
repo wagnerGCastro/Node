@@ -1,0 +1,162 @@
+﻿
+
+/* SMALL DEVICES - SMARTPHONES */
+@media screen and (min-width: 0px) and (max-width:320px) 
+{
+	.navbar-header{border: 0px solid; padding-bottom:0px !important; margin-bottom:0px  !important;}
+	
+	/*  logo full */
+
+	
+	/* menu mobie */
+	.navbar-toggle { border:1px solid #999!important;}
+	
+	.glyphicon-user, .glyphicon-comment, .glyphicon-exclamation-sign, 
+	.glyphicon-search {font-size: 20px;}
+	
+	#logoMobie li:nth-child(4){ margin-right: 0px; padding-right:0px;}
+	
+	#logoMobie {background: ;}
+	#logoMobie li{float:left !important; margin-right: 25px;}
+	#/logoMobie li:nth-child(1){ margin-left: -120px; padding-right:0px;}
+	#/logoMobie li:nth-child(4){ margin-right: 0px; padding-right:0px;}
+	
+	
+	/* PÁGINA HOME   //  MENU -TOPO
+	-------------------------------------------------- */
+	/* Menu tabs  */
+	
+	.glyphicon-home, .glyphicon-file {font-size: 15px !important; }
+	.glyphicon-home, .glyphicon-file {padding-right: 5px !important; }
+	.glyphicon-home, .glyphicon-file {outline-style:none !important; }
+	.menu-tabs li:nth-child(1) { margin: 0px 0px 0px -35px !important; }
+	.menu-tabs li { margin: 0px 0px 0px 10px !important; }
+	.menu-tabs ul li:active, .menu-tabs ul li:visited { outline-style:none !important; }
+	.menu-tabs ul li a:active, .menu-tabs ul li a:visited { outline-style:none !important; }
+	.menu-tabs ul li a i:active, .menu-tabs ul li a i:visited { outline-style:none !important; }
+	.menu-tabs ul li a i span:active, .menu-tabs ul li a i:visited { outline-style:none !important; }
+	.menu-tabs ul li span {font:800 13px/23px  'poiret_oneregular'; outline:none; }
+
+	
+}
+
+
+
+/* SMALL DEVICES - SMARTPHONES */
+@media screen and (min-width: 321px) and (max-width: 480px) 
+{
+	.navbar-header{border: 0px solid; padding-bottom:0px !important; margin-bottom:0px  !important;}
+	
+	/*  logo full */
+	
+	
+	/* menu mobie */
+	.navbar-toggle { border:1px solid #999 !important;}
+	
+	#logoMobie {background: ;}
+	#logoMobie li{float:left !important; margin-right: 45px;}
+	
+	/* tamanho dos icons */
+	
+	.glyphicon-user, .glyphicon-comment, .glyphicon-exclamation-sign, .glyphicon-search {font-size: 15px;}
+	#logoMobie li:nth-child(1){ margin-left:0px; padding-right:0px;}
+	#logoMobie li:nth-child(4){ margin-right: 0px; padding-right:0px;}
+	
+	
+	/* PÁGINA HOME   //  MENU -TOPO
+	-------------------------------------------------- */
+	/* Menu tabs  */
+	.glyphicon-home, .glyphicon-file {padding-right: 5px !important; }
+	.menu-tabs li:nth-child(1) { margin: 0px 0px 0px -15px !important; }
+	.menu-tabs ul li { margin: 0px 0px 0px 15px !important; }
+	.menu-tabs ul li span {font:800 13px/23px  'poiret_oneregular'; outline:none; }
+	
+}
+
+
+/* MEDIUM DEVICES - TABLETS & DESKTOPS*/ 
+@media screen and (min-width: 481px) and (max-width: 641px) 
+{
+	/* menu mobie */
+	.navbar-toggle { border:1px solid #999 !important;}
+	
+	#logoMobie {background: ;}
+	#logoMobie li{float:left !important; margin-right: 55px;}
+	
+	/* tamanho dos icons */
+	.glyphicon-user, .glyphicon-comment, .glyphicon-exclamation-sign, .glyphicon-search, ..glyphicon-eye-open {font-size: 15px;}
+	
+	#logoMobie li:nth-child(1){ margin-left:0px; padding-right:0px;}
+	#logoMobie li:nth-child(4){ margin-right: 0px; padding-right:0px;}
+	
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) 
+{
+	.navbar-header{border: 0px solid; padding-bottom:0px !important; margin-bottom:0px  !important;}
+	
+
+    /*  logo full */
+	
+	
+	/* menu mobie */
+	.navbar-toggle { border:1px solid #999 !important;}
+	
+	#logoMobie {background: ;}
+	#logoMobie li{float:left !important; margin-right: 45px;}
+	
+	/* tamanho dos icons */
+	
+	.glyphicon-user, .glyphicon-comment, .glyphicon-exclamation-sign, .glyphicon-search, .glyphicon-log-in {font-size: 15px;}
+	#logoMobie li:nth-child(1){ margin-left:0px; padding-right:0px;}
+	#logoMobie li:nth-child(4){ margin-right: 0px; padding-right:0px;}
+	
+	.pesquisar {margin: 0px 0px 0px 10px;}
+	
+	
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) 
+{
+	.logo{display:block !important;}
+	#logoMobie {display: none !important;}
+	#/logoFull {margin-top: -100px;}
+	#/logoMobie {visibility: hidden !important;}
+	#/menu-mobie li {display: none  !important;}
+	
+	/* tamanho dos icons */
+	.glyphicon-user, .glyphicon-comment, .glyphicon-exclamation-sign, .glyphicon-search, .glyphicon-log-in {font-size: 15px;}
+	
+	.navbar-form {width: 40% ;border: 0px solid; margin-left: 40px; margin-right: 0px;}
+	.pesquisar {margin: 2px 0px 0px 40px;}
+	.menu-desktop{border:0px solid; overflow: ; padding-left: 0px; margin-left: 0px;}
+	.menu-desktop ul{}
+	#/.menu-desktop ul li:nth-child(2) {border:1px solid; overflow: ; padding-left: 0px; margin-left: 0px;}
+
+	
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1680px) 
+{
+	#logoMobie {display: none !important;}
+	
+	#/logoMobie {visibility: hidden !important;}
+	#/menu-mobie li {display: none  !important;}
+	
+	/* tamanho dos icons */
+	.glyphicon-user, .glyphicon-comment, .glyphicon-exclamation-sign, .glyphicon-search, .glyphicon-log-in {font-size: 18px;}
+	
+	.navbar-form {width: 40% ;border: 0px solid; margin-left: 40px; margin-right: 0px;}
+	
+	.pesquisar {
+		margin: 2px 0px 0px 40px; width: 400px !important; border-radius: 10px;
+		font:900 18px/23px  'poiret_oneregular';
+	}
+	
+	.menu-desktop{border:0px solid; overflow: ; padding-left: 0px; margin-left: 0px;}
+	
+	
+}
+
+
+

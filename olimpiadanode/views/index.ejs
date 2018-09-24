@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title><%=title%></title>
+        <script type="text/javascript" src="/javascripts/jquery-3.2.0.min.js"></script>
+        <script type="text/javascript">
+
+            function adicionar(){
+                $("#formulario").show()
+                limparForm()
+            }
+            
+            function salvar(){
+                console.log('salvar: ');
+                $.post( "/salvar",
+                    {
+                         nome: $("#nome").val(),
+                        email: $("#email").val(),
+                           id: $("#id").val()
+                    },
+                    function(data){
+                      if (data.mensagem == "OK"){
+                          alert("Aluno salvo com sucesso. _id = " + data.aluno._id)
+                          $("#formulario").hide()
+                          limparForm()
+                          carregarLista()
+                      }else{
+                          alert("Ops bugou...")
+                      }
+            
+                    });
+
+                return false
+            }
+            function alterar(id){
+                $.post( "/alterar",
+                    {
+                        id: id
+                    },
+                    function(data){
+                      var aluno = data.aluno
+                        if (aluno){
+                            $("#nome").val(aluno.nome)
+                            $("#email").val(aluno.email)
+                            $("#id").val(aluno._id)
+                            $("#formulario").show()
+                        }else{
+                            alert("Ops bugou...")
+                        }
+            
+                    });
+            }
+            function excluir(id){
+                if (confirm("Vc está certo disso?")){
+                    $.post( "/excluir",
+                        {
+                            id: id
+                        },
+                        function(data){
+                            if (data.mensagem == "OK"){
+                                alert("Aluno excluído.")
+                                $("#formulario").hide()
+                                carregarLista()
+                            }else{
+                                alert("Ops... deu bug ao excluir")
+                            }
+            
+                        });
+                }
+            }
+            function limparForm(){
+                $("#nome").val("")
+                $("#email").val("")
+                $("#id").val("")
+            }
+            function carregarLista(){
+                $.get( "/listar", { },
+                    function(data){
+                        $("#lista").html(data)
+                    });
+            }
+            $(document).ready(function(){
+                $("#formulario").hide()
+                carregarLista()
+            })
+        </script>
+    </head>
+    <body>
+        <% include ./partials/menu %>
+        <p>
+            <a href="javascript: adicionar()">Adicionar</a>
+        </p>
+        <div id="lista">
+        </div>
+        <form name="formulario" id="formulario" action="/salvar" method="post" onsubmit="return salvar()">
+            Nome <input type="text" name="nome" id="nome" /><br />
+            E-mail <input type="email" name="email" id="email" /><br />
+            <input type="hidden" name="id" id="id" />
+            <input type="submit" name="enviar" value="Salvar" />
+        </form>
+    </body>
+</html>

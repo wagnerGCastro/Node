@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+        <title>MULTROOM CHAT</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport"> 
+        <!-- JQuery -->
+        <script src="js/jquery/jquery-2.2.1.js"></script>
+        <!-- bootstrap - link cdn -->
+        <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="components/izitoast/dist/css/iziToast.min.css">
+        <!-- incluindo css -->
+        <link href="css/cursonode.css" rel="stylesheet">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico"/>
+	</head>
+
+	<body>
+	
+	
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1" id="btn_navbar_toggle">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">Multiroom Chat</a>
+				</div>
+				
+				
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#" id="exibe_chat">Chat</a>
+						</li>
+						<li>
+							<a href="#" id="exibe_participantes">Participantes</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	
+		<div class="container">
+            <div class="row conversa" id="conversa">
+				<div class="col-md-1"></div>
+				<div class="col-md-10" id="dialogos">
+					
+				</div>
+				<div class="col-md-1"></div>
+                
+            </div>
+			
+			<div class="row participantes" id="participantes" style="display:none">
+				<div class="col-md-1"></div>
+					<div class="col-md-10" id="users">
+					</div>
+				<div class="col-md-1"></div>
+                
+            </div>
+        </div>
+		
+		<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+			<div class="container">
+				<div class="panel-body campo-mensagem">
+					<div class="col-md-12">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Mensagem" id="msg" name="msg">
+							<input type="hidden" id="apelido" name="apelido" value="<%= dadosForm.apelido %>">
+							<input type="hidden" id="apelido_atuliazado" name="apelido" value="0">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button" id="enviar_msg">></button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>		
+		
+		<!-- scsripts -->
+        <script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="components/izitoast/dist/js/iziToast.min.js" ></script>
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+        <script type="text/javascript" src="js/chat.js" ></script>
+	</body>
+</html>

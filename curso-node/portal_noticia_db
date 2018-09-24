@@ -1,0 +1,26 @@
+create database portal_noticia;
+
+use portal_noticia;
+
+
+create table noticia (
+	id int not null primary key auto_increment,
+	titulo varchar(100),
+	noticia text,
+	datacriacao timestamp default current_timestamp
+);
+
+insert into noticia (titulo, noticia) values ("titulo da noticia","conteudo da noticia");
+
+alter table noticia add column resumo varchar(100)
+alter table noticia add column autor varchar(40)
+
+
+ALTER TABLE `portal_noticia`.`noticia` 
+CHANGE COLUMN `datacriacao` `datacriacao` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `autor`;
+
+
+
+GRANT ALL ON *.* TO ‘root’@'%’ IDENTIFIED BY ‘root‘
+
+GRANT ALL PRIVILEGES on *.* to 'root'@'%' IDENTIFIED BY 'root'
