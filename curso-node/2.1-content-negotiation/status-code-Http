@@ -1,0 +1,69 @@
+1xx: Informativo
+============================================================================================
+Mensagem:	Descrição:
+100 Continue	     O servidor recebeu os cabeçalhos das solicitações e o cliente deve enviar o corpo do pedido
+101 Switching       Protocols	O solicitante pediu ao servidor para alternar protocolos
+103 Checkpoint	     Usado na proposta de solicitação para retomar pedidos PUT ou POST abortados
+
+2xx: Sucesso
+============================================================================================
+Mensagem:	Descrição:
+200 OK	                         O pedido está OK (esta é a resposta padrão para solicitações HTTP bem-sucedidas)
+201 Created	                    O pedido foi preenchido e um novo recurso foi criado
+202 Accepted	                    O pedido foi aceito para processamento, mas o processamento não foi concluído
+203 Non-Authoritative Information	O pedido foi processado com êxito, mas está retornando informações que podem ser de outra fonte
+204 No Content	                    O pedido foi processado com êxito, mas não está retornando nenhum conteúdo
+205 Reset Content	               A solicitação foi processada com êxito, mas não está retornando nenhum conteúdo e exige que o solicitante reponha a exibição do documento
+206 Reset Content	               O servidor está fornecendo apenas parte do recurso devido a um cabeçalho de intervalo enviado pelo cliente
+
+3xx: Redirecionamento
+============================================================================================
+Mensagem:	Descrição:
+300 Multiple Choices	Uma lista de links. O usuário pode selecionar um link e ir para esse local. Máximo de cinco endereços
+301 Moved Permanently	A página solicitada mudou para um novo URL
+302 Found	               A página solicitada mudou temporariamente para um novo URL
+303 See Other	          Outros A página solicitada pode ser encontrada em um URL diferente
+304 Not Modified	     Indica que a página solicitada não foi modificada desde o último pedido
+306 Switch Proxy	     Proxy já não é usado
+307 Temporary Redirect	A página solicitada foi movida temporariamente para um novo URL
+308 Resume Incomplete	Usado na proposta para retomar solicitações abortadas PUT ou POST
+
+4xx: erro do cliente
+============================================================================================
+Mensagem:	Descrição:
+400 Bad Request	                    O pedido não pode ser cumprido devido à sintaxe ruim
+401 Unauthorized	                    O pedido foi um pedido legal, mas o servidor está recusando responder a ele. Para uso quando a autenticação é possível, mas falhou ou ainda não foi fornecida
+402 Payment Required	               Reservado para uso futuro
+403 Forbidden	                         O pedido foi um pedido legal, mas o servidor se recusa a responder a ele
+404 Not Found	                         A página solicitada não pôde ser encontrada, mas pode estar disponível novamente no futuro
+405 Method Not Allowed	               Foi feita uma solicitação de uma página usando um método de solicitação não suportado por essa página
+406 Not Acceptable	                    O servidor só pode gerar uma resposta que não é aceita pelo cliente
+407 Proxy Authentication Required	     O cliente deve primeiro se autenticar com o proxy
+408 Request Timeout	                    O servidor expirou aguardando o pedido
+409 Conflict	                         O pedido não pôde ser completado devido a um conflito na solicitação
+410 Gone	                              A página solicitada não está mais disponível
+411 Length Required	                    O "Length Required" não está definido. O servidor não aceitará o pedido sem ele
+412 Precondition Failed	               A pré-condição dada na solicitação avaliada para false pelo servidor
+413 Request Entity Too Large	          O servidor não aceitará o pedido, porque a entidade de solicitação é muito grande
+414 Request-URI Too Long	               O servidor não aceitará o pedido, porque o URL é muito longo. Ocorre quando você converte uma solicitação POST para uma solicitação GET com uma longa consulta
+415 Unsupported Media Type	          O servidor não aceita a solicitação, porque o tipo de mídia não é suportado
+416 Requested Range Not Satisfiable	O cliente solicitou uma parte do arquivo, mas o servidor não pode fornecer essa parcela
+417 Expectation Failed	               O servidor não pode atender aos requisitos do campo Expect request-cabeçalho
+
+5xx: Erro do servidor
+============================================================================================
+Mensagem:	Descrição:
+500 Internal Server Error	          Uma mensagem de erro genérica, fornecida quando nenhuma mensagem específica é adequada
+501 Not Implemented	                    O servidor não reconhece o método de solicitação ou falta a capacidade de atender o pedido
+502 Bad Gateway	                    O servidor atuava como um gateway ou proxy e recebeu uma resposta inválida do servidor a montante
+503 Service Unavailable	               O servidor está indisponível no momento (sobrecarregado ou desativado)
+504 Gateway Timeout	                    O servidor estava atuando como um gateway ou proxy e não recebeu uma resposta atempada do servidor upstream
+505 HTTP Version Not Supported	     O servidor não suporta a versão do protocolo HTTP usada no pedido
+511 Network Authentication Required	O cliente precisa autenticar para obter acesso à rede
+
+
+
+
+
+
+

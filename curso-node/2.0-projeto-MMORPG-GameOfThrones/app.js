@@ -5,7 +5,7 @@ let app = require('./application/config/config');
 
 
 // parametriza a porta de escuta
-app.listen(3000, function() {
+app.listen(3001, function() {
     console.log("Servidor rodando com Express");
 });
 

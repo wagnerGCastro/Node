@@ -24,3 +24,12 @@ CHANGE COLUMN `datacriacao` `datacriacao` TIMESTAMP NOT NULL DEFAULT CURRENT_TIM
 GRANT ALL ON *.* TO ‘root’@'%’ IDENTIFIED BY ‘root‘
 
 GRANT ALL PRIVILEGES on *.* to 'root'@'%' IDENTIFIED BY 'root'
+
+
+
+d: got
+===============================================================================
+use got;
+db.getCollectionNames();
+db.usuarios.find({});
+

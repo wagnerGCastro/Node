@@ -1,4 +1,4 @@
-const Base64 = {
+var Base64 = {
     characters: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=" ,
 
     encode: function( string )

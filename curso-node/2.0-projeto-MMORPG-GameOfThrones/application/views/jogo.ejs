@@ -24,38 +24,66 @@
 		<nav class="navbar navbar-default navbar-static-top">
 			<div class="container">
 				<div class="form-group sair">
-					<button type="button" class="btn btn-info pull-right">Sair</button>
+					<button type="button" id="btnSair" onClick="location.href='/sair'" class="btn btn-info pull-right">Sair</button>
 				</div>
 			</div>
 		</nav>
 
 	    <div class="container">
+	    	<% if(msg == 'A'){ %>
+				<div class="alert alert-danger" id="msg">
+					<strong>Operação Inválida, verifique se todos os campos foram informados!</strong>
+				</div>
+			<% } %>
+
+			<% if(msg == 'B'){ %>
+				<div class="alert alert-info" id="msg">
+					<strong>Ação realizada com sucesso!</strong>
+				</div>
+			<% } %>
+
+			<% if(msg == 'C'){ %>
+				<div class="alert alert-info" id="msg">
+					<strong>Senhor, a atividade ordenada foi finalizada!</strong>
+				</div>
+			<% } %>
+
+			<% if(msg == 'D'){ %>
+				<div class="alert alert-info" id="msg">
+					<strong>Senhor, sua ordem foi revogada!</strong>
+				</div>
+			<% } %>
 	    	
+	    	
+			<div class="alert alert-danger" id="alert-errors" role="alert">
+					<strong> Erros</strong>
+			</div>
+
 			<div class="row">
 	    		<div class="col-sm-3 casa">
-					<img src="images/casa_martell.jpg" />
+					<img src="images/casa_<%=user.casa%>.jpg" />
 				</div>
 
 	    		<div class="col-sm-9">
 					<div class="row barra-superior">
 						<div class="col-sm-2"> 
 							<img src="images/habilidades/temor.jpg" title="Temor" alt="Temor" />
-							<span>754</span>
+							<span><%=item.temor%></span>
 						</div>
 						
 						<div class="col-sm-2"> 
 							<img src="images/habilidades/sabedoria.jpg" title="Sabedoria" alt="Sabedoria"/>
-							<span>754</span>
+							<span><%=item.sabedoria%></span>
 						</div>
 						
 						<div class="col-sm-2"> 
 							<img src="images/habilidades/comercio.jpg" title="Comércio" alt="Comércio"/>
-							<span>754</span>
+							<span><%=item.comercio%></span>
 						</div>
 						
 						<div class="col-sm-2"> 
 							<img src="images/habilidades/magia.jpg" title="Magia" alt="Magia"/>
-							<span>754</span>
+							<span><%=item.magia%></span>
 						</div>
 					</div>
 				</div>
@@ -64,7 +92,8 @@
 			<div class="row">
 				<div class="col-sm-3"></div>
 				<div class="col-sm-9">
-					<div class="acoes"></div>					
+					<div class="acoes" id="acoes">
+					</div>					
 				</div>
 			</div>
 			
@@ -75,22 +104,35 @@
 			
 				<div class="row">
 					<div class="col-sm-1">
-						<img src="images/outros/suditos.jpg" title="Aldeões" alt="Aldeões"/>
+						<img src="images/outros/suditos.jpg" title="Aldeões" alt="Aldeões" id="btnSudito"/>
+						<span><%=item.suditos%></span>
 					</div>
 					
 					<div class="col-sm-1">
-						<img src="images/outros/pergaminho.jpg" title="Pergaminhos" alt="Pergaminhos"/>
+						<img src="images/outros/pergaminho.jpg" title="Pergaminhos" alt="Pergaminhos" id="btnPergaminho"/>
+						<span>Ainda não tem</span>
 					</div>
 					
 					<div class="col-sm-8"></div>
 					
 					<div class="col-sm-2">
 						<img src="images/outros/moeda.jpg" title="Moeda" alt="Moeda"/>
-						<span>25</span>
+						<span><%=item.moeda%></span>
 					</div>
 					
 				</div>
 			</div>
 		</div>
+
+
+		<!-- classes -->
+		<script type="text/javascript" src="js/classes/helper.js" ></script>
+		<script type="text/javascript" src="js/classes/base64.js" ></script>
+		<script type="text/javascript" src="js/classes/cookie.js" ></script>
+		<!-- scsripts terceiros -->
+	    <script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="components/izitoast/dist/js/iziToast.min.js" ></script>
+		<!-- scsripts  -->
+	    <script type="text/javascript" src="js/controllers/jogo.js" ></script>
 	</body>
 </html>
